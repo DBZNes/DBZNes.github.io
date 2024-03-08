@@ -1,28 +1,119 @@
-body {
-    font-family: Arial, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
+    height: 100%;
+    background-color: #FFF8DC;
 }
 
-h1, h2 {
+.container {
+    display: flex;
+    height: 100%;
+    margin: 0;
+}
+
+.sidebar {
+    width: 25%;
+    padding: 20px;
+    background-color: #d2b48c;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
     text-align: center;
 }
 
-a {
-    text-decoration: none;
-    color: blue;
+.sidebar img {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của cột bên trái */
+    height: auto;
 }
 
-a:hover {
+.sidebar a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
     text-decoration: underline;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: center;
+.main-content {
+    flex: 1;
+    padding: 20px; 
+    padding-left: 35%;
 }
 
-li {
-    margin-bottom: 10px;
+.main-content a {
+    color: black;
+    text-decoration: underline; 
+    font-weight: bold;
+}
+
+.inspiration-list li {
+    margin-bottom: 20px;
+}
+
+.inspiration-name {
+    display: block;
+    font-weight: bold;
+}
+
+.inspiration-list img {
+    display: block;
+    width: 300px;
+    height: auto;
+    margin-top: 5px;
+}
+
+.sidebar-right {
+    width: 25%;
+    padding: 20px;
+    background-color: #1b2838;
+    color: aliceblue;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0; 
+    overflow-y: auto;
+}
+
+@media (max-width: 1300px) {
+    .sidebar-right {
+        display: none;
+    }
+}
+
+.playing-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.playing-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.playing-info {
+    margin-right: 10px;
+}
+
+.playing-name,
+.playing-description {
+    display: block; /* Hiển thị mỗi phần tử trên một dòng riêng biệt */
+    margin-bottom: 5px; /* Tạo khoảng cách giữa các phần tử */
+}
+
+.playing-list img {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin-top: 5px;
 }
