@@ -29,6 +29,7 @@ body, html {
     border-radius: 50%;
     max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước của cột bên trái */
     height: auto;
+    max-height: 180px;
 }
 
 .sidebar a {
@@ -45,9 +46,9 @@ body, html {
 }
 
 .main-content {
-    flex: 1;
-    padding: 20px; 
-    padding-left: 35%;
+    padding: 20px;
+    padding-left: 29%;
+    padding-right: 27%;
 }
 
 .main-content a {
@@ -116,4 +117,123 @@ body, html {
     width: 200px;
     height: auto;
     margin-top: 5px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 10px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.contact-item i {
+  font-size: 18px;
+  width: 22px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #aaa;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.section-header,
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 5px;
+}
+
+.section-header h2,
+.project-header strong {
+    margin: 0;
+}
+
+.right {
+    font-size: 14px;
+    color: #333;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project ul,
+.section ul {
+    margin-top: 5px;
+    padding-left: 20px;
+}
+
+.section p,
+.project p {
+    margin: 8px 0;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px; /* Khoảng cách giữa tên, |, công nghệ */
+}
+
+.separator {
+  margin: 0 2px;
+}
+
+.bottom-divider {
+  border: none;
+  border-top: 2px solid #333;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.certifications h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.cert-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.cert-row strong {
+  font-weight: bold;
+}
+
+.cert-date {
+  color: #ccc;
+  font-style: italic;
 }
